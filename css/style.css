@@ -34,7 +34,22 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 img {
-  max-width: 95%;
+  max-width: 85%;
+}
+h1, h2, h3 {
+  text-align: center;
+  font-family: var(--fuenteHeading);
+  line-height: 1.2;
+
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.5rem;
 }
 
 /*  --HEADER--  */
@@ -44,7 +59,7 @@ img {
 .contenedor_header {
   padding: 1rem;
   margin: 0 auto;
-  width: min(90%, 750px);
+  width: min(90%, 1250px);
   display: grid;
   grid-template-columns: 33% 33% 33%;
   gap: 5px;
@@ -139,10 +154,15 @@ img {
 /*  --MAIN--  */
 
 /*  --CONTACTO--  */
+.sub_titulo {
+  margin: 5rem auto 10rem auto;
+  /* text-decoration: underline; */
+  text-shadow: 3px 3px 5px grey;
+}
 .contacto-bg {
-  background-image: url(../img/vaca4.jpg);
+  background-image: url(../img/cortes-varios.jpg);
   height: 40rem;
-  width: 95%;
+  width: 75%;
   margin: 0 auto;
   background-size: cover;
   background-repeat: no-repeat;
@@ -151,25 +171,40 @@ img {
 .formulario {
   background-color: var(--blanco);
   margin: -5rem auto 0 auto;
-  width: 85%;
-  padding: 5rem;
+  width: 65%;
+  padding: 2.5rem;
   border-radius: 5px;
+  box-shadow: 5px 5px 10px rgb(72, 70, 70);
+}
+.mensaje {
+  text-align: center;
 }
 .campo {
   display: flex;
-  margin-bottom: 2rem;
+  margin: 2rem;
   gap: 2rem;
 }
-.campo__label {
-  flex: 0 0 9rem;
+.campo_label {
+  flex: 0 0 15rem;
   text-align: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+  align-content: center;
 }
-.campo__field {
-  flex: 1;
-  border: 1px solid var(--gris);
+.campo_field {
+  width: 90%;
+  /* flex: 1.2; */
+  padding: 1rem;
 }
-.campo__field--textarea {
-  height: 15rem;
+.boton_enviar {
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--blanco);
+  cursor: pointer;
+  padding: 1.2rem 2rem;
+  background-color: var(--grisOscuro);
 }
 
 /*  --FOOTER--  */
@@ -179,6 +214,23 @@ img {
   padding: 2rem;
   color: white;
   font-size: 1.2rem;
+  margin-top: 10rem;
+}
+@media (max-width: 767px) {
+    .campo {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .campo_label {
+      flex: 0 0 0;
+
+      /* height: 5rem; */
+    }
+    .campo_field {
+      /* width: 90%; */
+      margin: 0 auto 3rem 0;
+      gap: 0;
+    }
 }
 
 @media (min-width: 768px) {

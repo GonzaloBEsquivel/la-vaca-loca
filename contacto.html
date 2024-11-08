@@ -57,16 +57,16 @@
     </header>
     
     <main class="contenedor_main">
-      <h2>Contacto</h2>
+      <h2 class="sub_titulo">Contacto</h2>
       <div class="contacto-bg"></div>
 
       <form class="formulario" action="https://formspree.io/f/xblrvdby" method="POST">
-        <fieldset>
-          <legend>Datos Personales</legend>
+        <fieldset class="fieldset">
+          <legend class="mensaje"><h3>Datos personales</h3></legend>
 
           <div class="campo">
             <label class="campo_label" for="nombre">Nombre y Apellido: </label>
-            <input class="campo_field" id="nombre" type="text" placeholder="Ingrese su nombre y apellido" size="30" name="nombre" required>
+            <input class="campo_field" id="nombre" type="text" placeholder="Nombre completo" size="30" name="nombre" required>
           </div>
 
           <div class="campo">
@@ -76,12 +76,12 @@
 
           <div class="campo">
             <label class="campo_label" for="comentarios">Mensaje: </label>
-            <textarea class="campo_field campo__field--textarea" name="comentarios" id="comentarios" placeholder="Dejanos tus comentarios y/o sugerencias." rows="5" cols="30" required></textarea>
+            <textarea class="campo_field campo_field--textarea" name="comentarios" id="comentarios" placeholder="Dejanos tus comentarios y/o sugerencias." rows="5" cols="30" required></textarea>
           </div>
         </fieldset>
         <div class="campo">
           <button class="boton_enviar" type="submit">Enviar</button>
-          <button class="boton_borrar" type="reset">Borrar datos</button>
+          <!-- <button class="boton_borrar" type="reset">Borrar datos</button> -->
         </div>
         
       </form>
