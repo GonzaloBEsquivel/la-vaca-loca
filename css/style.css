@@ -171,8 +171,7 @@ h4 {
   margin: 20px auto;
 }
 .review {
-  /* display: flex;
-  flex-direction: column; */
+
   background-color: #fff;
   border: 1px solid #4e4141;
   border-radius: 10px;
@@ -254,6 +253,28 @@ h4 {
   color: white;
   font-size: 1.2rem;
   margin-top: 10rem;
+}
+@media (max-width: 426px) {
+  .contacto-bg, .resenas-bg {
+    max-height: 15rem;
+    width: 100%;
+  }
+  .sub_titulo {
+    margin: 1.2rem auto;
+  }
+  .contenedor_resenas {
+    width: 95%;
+    margin: 20px auto;
+  }
+  .formulario {
+    width: 95%;
+    margin-top: -1rem
+  }
+  .review {
+    margin-bottom: .5rem;
+    padding: 1.2rem;
+  }
+    
 }
 @media (max-width: 767px) {
   .review h3 {
