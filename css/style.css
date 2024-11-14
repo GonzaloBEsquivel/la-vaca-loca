@@ -156,28 +156,87 @@ h4 {
 
 /*  --MAIN--  */
 
+/*  --PRODUCTOS--  */
+/* .contenedor_productos {
+  max-width: 120rem;
+  margin: 0 auto;
+} */
+.productos-bg {
+  background-image: url(../img/bg-3.jpg);
+  height: 40rem;
+  width: 95%;
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--blanco);
+  padding: 1.5rem;
+  margin: 2rem;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px var(--grisOscuro);
+}
+.producto_imagen {
+  border-radius: 10px;
+}
+.producto_nombre {
+  font-size: 2.5rem;
+}
+.producto_precio {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.producto_nombre,
+.producto_precio {
+  font-family: var(--fuente);
+  margin: 1rem 0;
+  text-align: center;
+  line-height: 1.2;
+}
+.boton_carrito {
+  width: 90%;
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  cursor: pointer;
+  background-color: var(--grisOscuro);
+  color: var(--blanco);
+  font-weight: bold;
+}
+
 /*  --RESENAS-- */
 .resenas-bg {
-  background-image: url(../img/mostrador.jpg);
+  background-image: url(../img/bg-2.jpg);
   height: 40rem;
-  width: 75%;
+  width: 95%;
   margin: 0 auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 .contenedor_resenas {
-  width: 70%;
+  width: 85%;
   margin: 20px auto;
 }
 .review {
-
   background-color: #fff;
   border: 1px solid #4e4141;
   border-radius: 10px;
   padding: 15px;
   margin-bottom: 15px;
   box-shadow: 5px 5px 10px rgb(72, 70, 70);
+}
+.review_resenas {
+  width: 85%;
+  margin: 0 auto;
 }
 .review h3 {
   text-align: left;
@@ -194,13 +253,12 @@ h4 {
 /*  --CONTACTO--  */
 .sub_titulo {
   margin: 2rem auto 5rem auto;
-  /* text-decoration: underline; */
   text-shadow: 3px 3px 5px rgb(133, 103, 103);
 }
 .contacto-bg {
-  background-image: url(../img/cortes-varios.jpg);
+  background-image: url(../img/bg-1.jpg);
   height: 40rem;
-  width: 75%;
+  width: 95%;
   margin: 0 auto;
   background-size: cover;
   background-repeat: no-repeat;
@@ -208,8 +266,8 @@ h4 {
 }
 .formulario {
   background-color: var(--blanco);
-  margin: -5rem auto 0 auto;
-  width: 65%;
+  margin: -3rem auto 0 auto;
+  width: 85%;
   padding: 2.5rem;
   border-radius: 5px;
   box-shadow: 5px 5px 10px rgb(72, 70, 70);
@@ -231,7 +289,6 @@ h4 {
 }
 .campo_field {
   width: 95%;
-  /* flex: 1.2; */
   padding: 1rem;
 }
 .boton_enviar {
@@ -255,9 +312,12 @@ h4 {
   margin-top: 10rem;
 }
 @media (max-width: 426px) {
-  .contacto-bg, .resenas-bg {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .productos-bg, .contacto-bg, .resenas-bg {
     max-height: 15rem;
-    width: 100%;
+    
   }
   .sub_titulo {
     margin: 1.2rem auto;
@@ -274,9 +334,12 @@ h4 {
     margin-bottom: .5rem;
     padding: 1.2rem;
   }
-    
+  .review_resenas {
+    width: 95%;
+  }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  
   .review h3 {
     padding: 0;
   }
@@ -287,8 +350,9 @@ h4 {
       font-size: 1.8rem;
       padding: 2rem 0; 
     }
-    .contacto-bg, .resenas-bg {
+    .productos-bg, .contacto-bg, .resenas-bg {
       height: 25rem;
+      width: 100%;
     }
     .campo {
       flex-direction: column;
@@ -315,7 +379,13 @@ h4 {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
+  .grid {
+    grid-template-columns: repeat(
+      4, 1fr);
+      width: 70%;
+      margin: 2rem auto;
+  }
   .contenedor_header {
     justify-content: center;
     align-items: center;
@@ -363,5 +433,29 @@ h4 {
     color: var(--rosaOscuro);
     font-size: 1.2rem;
     display: block;
+  }
+  .productos-bg, .contacto-bg, .resenas-bg {
+    height: 40rem;
+    width: 70%;
+  }
+  .article {
+    width: 65%;
+    margin: 0 auto;
+  }
+  .contenedor_resenas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 95%;
+    margin: 20px auto;
+  }
+  .review {
+    margin: 1.2rem;
+  }
+  .review_resenas {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .formulario {
+    width: 60%;
   }
 }
