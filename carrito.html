@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Vaca Loca - Carnicería</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/la-vaca-loca.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="contenedor_header">
+        <div class="logo">
+          <a class="enlace_logo" href="index.html">
+            <img class="img_logo" src="img/la-vaca-loca.png" width="150" alt="Imagen Vaca Loca" />
+            <h1 class="titulo_logo">La Vaca Loca <span>Carnicería</span></h1>
+          </a>
+        </div>
+        <div class="buscar">
+          <input class="search" id="search" type="search" placeholder="¿Qué estás buscando?">
+        </div>
+        <div class="carrito">
+          <a href="./carrito.html">
+            <button class="carro">
+                <i class="bi bi-cart3"></i>
+                <span class="num-carrito">0</span>
+            </button>
+          </a>
+          
+        </div>
+        <div class="nav">
+          <button id="abrir" class="abrir_menu"><i class="bi bi-list"></i></button>
+          <nav id="nav_menu" class="nav_menu">
+            <ul class="nav_lista">
+              <button id="cerrar" class="cerrar_menu"><i class="bi bi-x"></i></button>
+              <li>
+                <a href="index.html">Inicio</a>
+              </li>
+              <li>
+                <a href="productos.html">Productos</a>
+              </li>
+              <li>
+                <a href="reseñas.html">Reseñas</a>
+              </li>
+              <li>
+                <a href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+        <div>
+            <a href="./productos.html">
+                <button class="seguir_comprando">Seguir comprando</button>
+            </a>
+        </div>
+        <section class="contenedor_carrito">
+            <h2 class="sub_titulo">Carrito de compras</h2>
+
+            <div class="carrito">
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Subtotal</th>
+                  </tr>
+                </thead>
+                  <tbody class="items">
+                    <tr data-id="">
+                      <td>Nombre</td>
+                      <td>Cantidad</td>
+                      <td>Precio</td>
+                      <td>Subtotal</td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
+        </section>
+
+        
+    </main>
+    <footer class="footer">
+      <p>© Copyright 2024 - Todos los derechos reservados.</p>
+    </footer>
+    
+  </body>
+</html>
